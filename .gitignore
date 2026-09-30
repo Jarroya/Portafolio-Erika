@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Herramientas locales
+.claude/settings.local.json
+.playwright-mcp/
+
+# Material de trabajo no publicable
+*.zip
+variantes-portada/
