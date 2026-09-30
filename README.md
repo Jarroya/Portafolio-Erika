@@ -52,8 +52,33 @@ src/
     Differential.tsx      Diferencial profesional y enfoque
     Contact.tsx           Datos, WhatsApp y formulario
     Footer.tsx
-public/img/               Retrato tratado (webp, jpg) e imagen para compartir
+public/img/               Retrato recortado (webp) e imagen para compartir
+scripts/
+  generar-retrato.py      Recorta el fondo del retrato y exporta los webp
 ```
+
+## Cómo cambiar el retrato de portada
+
+El retrato va sin fondo y se apoya directamente sobre la portada, sin marco ni
+sombra. Los archivos de `public/img/` no se editan a mano: los genera un script
+a partir de la foto original.
+
+```bash
+pip install pillow numpy scipy
+python scripts/generar-retrato.py "ruta/a/la/foto.png"
+```
+
+Recorta el fondo, disuelve los bordes donde el encuadre corta el cabello o los
+hombros, y escribe las tres versiones que usa el sitio. Si cambias la foto,
+actualiza también `width` y `height` del `<img>` en `src/components/Hero.tsx`
+para que coincidan con el nuevo tamaño y el navegador no reacomode la página al
+cargar.
+
+La foto original no está en el repositorio: es material de trabajo y pesa
+varios MB. Guárdala aparte.
+
+El recorte automático asume un retrato de estudio sobre fondo claro y uniforme.
+Con un fondo oscuro o con textura no funciona y habría que recortar a mano.
 
 ## Cómo editar el contenido
 

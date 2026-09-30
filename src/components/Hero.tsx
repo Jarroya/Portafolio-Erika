@@ -79,21 +79,16 @@ export function Hero() {
 function Portrait() {
   return (
     <div className="relative mx-auto w-full max-w-[19rem] sm:max-w-sm lg:max-w-none">
-      {/* Bloque de acento desplazado: da profundidad sin recargar la portada. */}
-      <div
-        className="absolute -bottom-5 -left-5 w-2/3 h-2/3 rounded-[2rem] bg-brand-300/45 -z-10"
-        aria-hidden="true"
-      />
       <picture>
-        {/* En móvil basta una versión ligera: el marco nunca pasa de ~304px. */}
+        {/* Retrato recortado: sin marco ni fondo, se apoya directamente en la portada. */}
+        {/* En móvil basta una versión ligera: el retrato nunca pasa de ~304px. */}
         <source media="(max-width: 640px)" srcSet="/img/erika-portada-sm.webp" type="image/webp" />
-        <source srcSet="/img/erika-portada.webp" type="image/webp" />
         <img
-          src="/img/erika-portada.jpg"
+          src="/img/erika-portada.webp"
           width={1200}
-          height={1500}
+          height={1487}
           alt="Erika J. Vásquez, ingeniera ambiental y consultora en sostenibilidad"
-          className="relative w-full rounded-[2rem] object-cover shadow-[0_24px_60px_-28px_rgba(20,40,31,0.45)]"
+          className="relative w-full h-auto object-contain"
           fetchPriority="high"
         />
       </picture>
