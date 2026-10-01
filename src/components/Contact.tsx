@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 import { Mail, Phone, Linkedin, MapPin, Send, MessageCircle } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { defaultContactProfile as profile, serviceLines, commercialProducts } from '../data/portfolioData';
+import { defaultContactProfile as profile, serviceLines, commercialProducts, strategicAlliances } from '../data/portfolioData';
 import { whatsappUrl } from '../lib/contact';
 
 interface ContactProps {
@@ -13,6 +13,7 @@ interface ContactProps {
 const OPTIONS = [
   ...serviceLines.map((line) => line.title),
   ...commercialProducts.map((product) => product.title),
+  ...strategicAlliances.map((alliance) => alliance.title),
   'Apoyo técnico para firma consultora',
   'Otro tema',
 ];

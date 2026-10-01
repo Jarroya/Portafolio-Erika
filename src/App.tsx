@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Profile } from './components/Profile';
 import { Services } from './components/Services';
 import { Solutions } from './components/Solutions';
+import { Alliances } from './components/Alliances';
 import { Methodology } from './components/Methodology';
 import { Collaboration } from './components/Collaboration';
 import { Differential } from './components/Differential';
@@ -40,6 +41,7 @@ export default function App() {
         <Profile />
         <Services onRequest={requestTopic} />
         <Solutions onRequest={requestTopic} />
+        <Alliances onRequest={requestTopic} />
         <Methodology />
         <Collaboration onRequest={requestTopic} />
         <Differential />

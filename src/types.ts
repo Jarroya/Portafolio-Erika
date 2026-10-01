@@ -47,6 +47,17 @@ export interface ServiceModality {
   roleExamples?: string[];
 }
 
+export interface StrategicAlliance {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  /** Lo que ejecuta el aliado. */
+  scope: string[];
+  /** Lo que aporto yo en ese mismo servicio. */
+  myRole: string[];
+}
+
 export interface ContactProfile {
   name: string;
   title: string;

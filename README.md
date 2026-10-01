@@ -47,6 +47,7 @@ src/
     Services.tsx          Seis líneas de servicio (tarjetas)
     ServiceDrawer.tsx     Panel lateral con el detalle de cada línea
     Solutions.tsx         Ocho soluciones con alcance cerrado
+    Alliances.tsx         Servicios que ejecutan aliados especializados
     Methodology.tsx       Las seis fases de trabajo
     Collaboration.tsx     Modalidades, alianza B2B y clientes objetivo
     Differential.tsx      Diferencial profesional y enfoque

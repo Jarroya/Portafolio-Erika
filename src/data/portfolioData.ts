@@ -1,4 +1,4 @@
-import { ServiceLine, CommercialProduct, MethodologyPhase, ServiceModality, ContactProfile, ExpertiseGroup, HeroFact } from '../types';
+import { ServiceLine, CommercialProduct, MethodologyPhase, ServiceModality, StrategicAlliance, ContactProfile, ExpertiseGroup, HeroFact } from '../types';
 
 export const defaultContactProfile: ContactProfile = {
   name: "Erika J. Vásquez",
@@ -203,64 +203,88 @@ export const serviceLines: ServiceLine[] = [
     ]
   },
   {
-    id: "cambio-climatico",
+    id: "formacion-capacitacion",
     number: "04",
-    title: "Cambio Climático y Huella de Carbono",
-    category: "Gestión Climática & Descarbonización",
-    objective: "Cuantificar las emisiones de Gases de Efecto Invernadero (GEI) y convertir los datos obtenidos en herramientas para la estrategia y resiliencia climática de la organización.",
+    title: "Planes de Formación, Entrenamiento y Capacitación",
+    category: "Formación & Cultura Organizacional",
+    objective: "Cerrar las brechas de competencia del equipo para que la gestión ambiental no dependa de una sola persona y las buenas prácticas se sostengan en la operación diaria.",
     services: [
       {
         id: "4.1",
-        title: "Inventario de Gases de Efecto Invernadero (GEI)",
-        description: "Elaboración de inventarios organizacionales bajo estándares internacionales (GHG Protocol / ISO 14064).",
+        title: "Diagnóstico de necesidades y plan anual de formación",
+        description: "Identificación de la distancia entre las competencias que exige cada cargo y las que hoy tiene el equipo, y estructuración del plan que las cierra.",
         includes: [
-          "Definición de límites organizacionales y de consolidación",
-          "Definición de límites operacionales (Alcances 1, 2 y 3 aplicables)",
-          "Identificación y categorización de fuentes de emisión fijas y móviles",
-          "Recopilación y depuración de datos de actividad",
-          "Selección rigurosa de factores de emisión oficiales",
-          "Cálculo estandarizado en toneladas de CO2 equivalente",
-          "Consolidación y análisis de incertidumbre"
+          "Revisión de perfiles, funciones y responsabilidades ambientales",
+          "Matriz de competencias requeridas por cargo y proceso",
+          "Evaluación de conocimientos previos y brechas detectadas",
+          "Priorización de temas según riesgo, normativa y hallazgos de auditoría"
+        ],
+        deliverables: [
+          "Plan anual de formación con cronograma e intensidad horaria",
+          "Fichas técnicas por sesión: objetivo, contenido y población objetivo",
+          "Matriz de cobertura por cargo y proceso",
+          "Procedimiento de gestión de la formación y sus registros"
         ]
       },
       {
         id: "4.2",
-        title: "Cálculo de huella de carbono organizacional",
-        description: "Estimación técnica y rigurosa de la huella de carbono para organizaciones de cualquier sector económico.",
-        includes: [
-          "Emisiones directas: combustión fija, flota propia, fugas de refrigerantes (Alcance 1)",
-          "Emisiones indirectas por consumo de energía eléctrica y vapor (Alcance 2)",
-          "Emisiones relevantes de la cadena de valor (Alcance 3)",
-          "Indicadores de intensidad de emisiones (tCO2e/producción, tCO2e/empleado)",
-          "Identificación y ranking de focos críticos de emisión"
+        title: "Formación en normativa ambiental y cumplimiento legal",
+        description: "Sesiones sobre las obligaciones que aplican a la operación y la forma de demostrarlas ante la autoridad ambiental.",
+        examples: [
+          "Requisitos legales aplicables e identificación de obligaciones",
+          "Uso y actualización de la matriz legal",
+          "Permisos, concesiones y reportes ante autoridad ambiental",
+          "Preparación del equipo para visitas e inspecciones",
+          "Régimen sancionatorio y consecuencias del incumplimiento"
         ]
       },
       {
         id: "4.3",
-        title: "Documentación metodológica y reporte técnico",
-        description: "Desarrollo del informe técnico con sustento auditable para presentación ante juntas directivas, clientes o certificadoras.",
-        deliverables: [
-          "Informe metodológico completo con fuentes y factores",
-          "Memoria de cálculo detallada en Excel / herramienta digital",
-          "Resumen ejecutivo de resultados e interpretaciones",
-          "Conclusiones y hoja de ruta de mitigación"
+        title: "Formación en sistemas de gestión ISO y auditoría interna",
+        description: "Entrenamiento en la interpretación de los requisitos de norma y en la práctica de auditar.",
+        examples: [
+          "Interpretación de requisitos ISO 14001, ISO 9001, ISO 45001 e ISO 31000",
+          "Formación de auditores internos y conformación de equipos auditores",
+          "Planificación, ejecución y reporte de auditorías internas",
+          "Redacción de hallazgos, no conformidades y planes de acción",
+          "Preparación del equipo para auditorías de certificación"
         ]
       },
       {
         id: "4.4",
-        title: "Plan de gestión y reducción de emisiones",
-        description: "Transformación del inventario en acciones operacionales concretas de reducción y eficiencia.",
-        includes: [
-          "Priorización de medidas costo-efectivas de mitigación",
-          "Metas de reducción a corto, mediano y largo plazo",
-          "Asignación de responsables y cronograma de implementación",
-          "Indicadores de seguimiento y verificación de avances"
+        title: "Capacitación operativa en residuos y economía circular",
+        description: "Formación dirigida al personal que ejecuta, con enfoque práctico en el puesto de trabajo.",
+        examples: [
+          "Separación en la fuente y uso correcto de puntos ecológicos",
+          "Manejo seguro y etiquetado de residuos peligrosos (RESPEL)",
+          "Aprovechamiento, valorización y disposición final",
+          "Buenas prácticas de ahorro de agua y energía",
+          "Sensibilización en economía circular y consumo responsable"
         ]
       },
       {
         id: "4.5",
-        title: "Cambio climático y Sistemas de Gestión",
-        description: "Integración de las consideraciones climáticas en la matriz de riesgos, política, objetivos y toma de decisiones de la empresa."
+        title: "Entrenamiento en gestión del riesgo y respuesta a emergencias",
+        description: "Preparación del equipo para identificar riesgos y actuar ante contingencias ambientales.",
+        examples: [
+          "Identificación y valoración de riesgos bajo ISO 31000",
+          "Divulgación del plan de gestión del riesgo de desastre",
+          "Protocolos de respuesta ante derrames y contingencias ambientales",
+          "Conformación y entrenamiento de brigadas",
+          "Simulacros, evaluación de desempeño y lecciones aprendidas"
+        ]
+      },
+      {
+        id: "4.6",
+        title: "Material didáctico y evaluación de eficacia",
+        description: "Construcción del material de apoyo y medición de si la formación cambió algo en la operación.",
+        deliverables: [
+          "Presentaciones, guías rápidas y material de apoyo",
+          "Piezas de sensibilización para carteleras y canales internos",
+          "Evaluaciones de conocimiento antes y después de la sesión",
+          "Registro de asistencia y certificados de participación",
+          "Informe de eficacia de la formación con recomendaciones"
+        ]
       }
     ]
   },
@@ -298,6 +322,26 @@ export const serviceLines: ServiceLine[] = [
       },
       {
         id: "5.3",
+        title: "Plan de Gestión del Riesgo de Desastre (PGRD)",
+        description: "Formulación del plan con el que la organización identifica sus escenarios de riesgo, se prepara para la emergencia y define cómo recupera la operación.",
+        includes: [
+          "Caracterización del entorno, la operación y las partes interesadas",
+          "Identificación y priorización de escenarios de riesgo de desastre",
+          "Análisis de vulnerabilidad y estimación de daños y pérdidas",
+          "Medidas de reducción del riesgo: prevención y mitigación",
+          "Protocolos de preparación, alerta y respuesta ante emergencias",
+          "Estrategias de recuperación y continuidad de la operación"
+        ],
+        deliverables: [
+          "Documento completo del PGRD listo para adopción por la dirección",
+          "Matriz de escenarios de riesgo con valoración y controles",
+          "Protocolos de respuesta y directorio de emergencias",
+          "Programa de simulacros y plan de divulgación al personal",
+          "Cronograma de actualización y seguimiento del plan"
+        ]
+      },
+      {
+        id: "5.4",
         title: "Sistemas de indicadores de desempeño ambiental",
         description: "Diseño de métricas cuantitativas para evaluar consumos, eficiencias, tasas de aprovechamiento y cumplimiento normativo.",
         includes: [
@@ -308,7 +352,7 @@ export const serviceLines: ServiceLine[] = [
         ]
       },
       {
-        id: "5.4",
+        id: "5.5",
         title: "Informes ambientales ejecutivos y técnicos",
         description: "Apoyo en la consolidación de informes de gestión periódicos para autoridades ambientales, interventorías o clientes.",
         deliverables: [
@@ -407,19 +451,19 @@ export const commercialProducts: CommercialProduct[] = [
   {
     id: "prod-3",
     number: 3,
-    title: "Huella de Carbono + Plan Climático",
-    subtitle: "Cuantificación + Análisis + Estrategia de Reducción",
-    description: "Medición rigurosa de emisiones de GEI organizacionales bajo GHG Protocol y estructuración de un plan de descarbonización práctico y viable.",
+    title: "Plan de Formación y Capacitación Ambiental",
+    subtitle: "Diagnóstico + Plan Anual + Ejecución",
+    description: "Identificación de las brechas de competencia del equipo y estructuración del plan que las cierra, con las sesiones dictadas y su eficacia medida.",
     deliverables: [
-      "Inventario organizacional de GEI (Alcance 1 y 2, Alcance 3 clave)",
-      "Cálculo de huella de carbono y memoria metodológica auditable",
-      "Indicadores de intensidad de emisiones",
-      "Identificación de fuentes críticas y oportunidades de reducción",
-      "Plan de acción climática con metas e indicadores de seguimiento"
+      "Matriz de competencias y diagnóstico de necesidades por cargo",
+      "Plan anual de formación con cronograma e intensidad horaria",
+      "Sesiones dictadas con material de apoyo y registro de asistencia",
+      "Evaluaciones de conocimiento antes y después de cada sesión",
+      "Informe de eficacia de la formación con recomendaciones"
     ],
-    targetAudience: "Organizaciones comprometidas con metas ESG o con requerimientos de clientes",
-    badge: "Estratégico ESG",
-    estimatedTimeline: "4 a 6 semanas"
+    targetAudience: "Organizaciones que necesitan sostener el sistema de gestión sin depender de una sola persona",
+    badge: "Cultura Organizacional",
+    estimatedTimeline: "4 a 8 semanas"
   },
   {
     id: "prod-4",
@@ -504,6 +548,52 @@ export const commercialProducts: CommercialProduct[] = [
     estimatedTimeline: "3 a 5 semanas"
   }
 ];
+
+/** Servicios que ejecutan aliados especializados bajo mi coordinación técnica. */
+export const strategicAlliances: StrategicAlliance[] = [
+  {
+    id: "mediciones-monitoreos",
+    title: "Mediciones y Monitoreos Ambientales",
+    subtitle: "Ejecutados por laboratorios y profesionales especializados",
+    description: "Campañas de medición en campo para sustentar el cumplimiento normativo, verificar la eficacia de los controles operacionales y alimentar los indicadores del sistema de gestión.",
+    scope: [
+      "Monitoreo de emisión de ruido y de ruido ambiental",
+      "Calidad de agua: vertimientos, agua potable y cuerpos receptores",
+      "Calidad de aire: emisiones atmosféricas y aire ambiente",
+      "Caracterización de residuos y muestreos específicos",
+      "Mediciones adicionales según el permiso o requerimiento aplicable"
+    ],
+    myRole: [
+      "Definición de qué medir, dónde y con qué frecuencia según la obligación",
+      "Revisión de que el alcance propuesto responda al requisito real",
+      "Interpretación técnica de resultados frente a los límites aplicables",
+      "Integración de los datos al sistema de gestión y a los indicadores",
+      "Formulación del plan de acción cuando los resultados lo exigen"
+    ]
+  },
+  {
+    id: "tramites-ambientales",
+    title: "Trámites y Permisos Ambientales",
+    subtitle: "Asesoría y acompañamiento con profesionales especializados",
+    description: "Acompañamiento en la gestión de permisos, concesiones y autorizaciones ante las autoridades ambientales, con el equipo técnico que cada trámite exige.",
+    scope: [
+      "Identificación de los permisos que exige la operación",
+      "Concesiones de agua, permisos de vertimiento y de emisiones",
+      "Preparación y radicación de la documentación técnica de soporte",
+      "Registros, autorizaciones y renovaciones ante autoridad ambiental",
+      "Atención de requerimientos, visitas e inspecciones"
+    ],
+    myRole: [
+      "Diagnóstico de los trámites aplicables y de su estado actual",
+      "Coordinación del profesional especializado que cada trámite requiere",
+      "Revisión técnica de los documentos antes de radicar",
+      "Seguimiento de plazos y vencimientos desde la matriz legal",
+      "Interlocución única para la empresa durante todo el proceso"
+    ]
+  }
+];
+
+export const alliancesNote = "La empresa mantiene un solo interlocutor técnico. Yo respondo por el criterio, el alcance y la lectura de los resultados; el aliado responde por la ejecución especializada y por las acreditaciones que cada medición exige.";
 
 export const methodologyPhases: MethodologyPhase[] = [
   {
@@ -595,7 +685,7 @@ export const serviceModalities: ServiceModality[] = [
     idealFor: [
       "Diagnósticos ambientales integrales",
       "Estructuración o actualización de programas",
-      "Cálculo y reporte de huella de carbono",
+      "Diseño y ejecución de planes de formación",
       "Implementación de requisitos ISO 14001",
       "Elaboración de matrices legales y de riesgos"
     ]
@@ -637,7 +727,7 @@ export const serviceModalities: ServiceModality[] = [
     description: "Desarrollo ágil de todas las actividades técnicas ejecutables virtualmente con herramientas colaborativas en la nube.",
     idealFor: [
       "Análisis documental e investigación normativa",
-      "Modelación y cálculo de huella de carbono",
+      "Formación y capacitación en modalidad virtual",
       "Diseño de matrices, indicadores y tableros Power BI",
       "Elaboración de informes ejecutivos y planes de acción"
     ]
@@ -759,7 +849,7 @@ export const valueForFirms: string[] = [
   "Diagnósticos y evaluaciones de cumplimiento",
   "Diseño y actualización de programas y planes ambientales",
   "Matrices, procedimientos, indicadores y herramientas de seguimiento",
-  "Cálculo y documentación de huella de carbono",
+  "Elaboración de planes de gestión del riesgo de desastre",
   "Automatización y visualización de información ambiental"
 ];
 

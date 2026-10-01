@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ClipboardCheck, ShieldCheck, Recycle, CloudSun, FileText, BarChart3, ArrowUpRight } from 'lucide-react';
+import { ClipboardCheck, ShieldCheck, Recycle, GraduationCap, FileText, BarChart3, ArrowUpRight } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { Section } from './Section';
 import { ServiceDrawer } from './ServiceDrawer';
@@ -10,7 +10,7 @@ const ICONS: Record<string, LucideIcon> = {
   'gestion-ambiental': ClipboardCheck,
   'sistemas-iso': ShieldCheck,
   'residuos-circular': Recycle,
-  'cambio-climatico': CloudSun,
+  'formacion-capacitacion': GraduationCap,
   'programas-documentacion': FileText,
   'riesgo-sostenibilidad-digital': BarChart3,
 };

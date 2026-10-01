@@ -7,6 +7,7 @@ const LINKS = [
   { href: '#perfil', label: 'Perfil' },
   { href: '#servicios', label: 'Servicios' },
   { href: '#soluciones', label: 'Soluciones' },
+  { href: '#alianzas', label: 'Alianzas' },
   { href: '#metodologia', label: 'Metodología' },
   { href: '#colaboracion', label: 'Colaboración' },
 ];
