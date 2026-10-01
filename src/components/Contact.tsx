@@ -55,7 +55,9 @@ export function Contact({ topic, onTopicChange }: ContactProps) {
     <section id="contacto" className="bg-brand-50 py-20 sm:py-24 lg:py-28">
       <div className="shell">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-5 reveal">
+          {/* min-w-0: sin esto el elemento de rejilla no baja de su ancho máximo
+              y el texto con truncate de los datos de contacto desborda la página. */}
+          <div className="lg:col-span-5 min-w-0 reveal">
             <p className="eyebrow">Contacto</p>
             <h2 className="mt-4 text-3xl sm:text-4xl leading-[1.12] text-ink" style={{ textWrap: 'balance' }}>
               ¿Tienes un proyecto ambiental que requiere apoyo técnico?
